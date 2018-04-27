@@ -2,17 +2,14 @@ import threading
 import re
 import sys
 
-<<<<<<< HEAD
 NUMBER_OF_THREADS = 4
 
 class Graph:
     PLUS_INF = 10 ** 21
-=======
-NUMBER_OF_THREADS = 1
+    NUMBER_OF_THREADS = 1
 
 class Graph:
     PLUS_INF = 100# ** 21
->>>>>>> Init commit
     MINES_INF = -10 ** 21
 
     def __init__(self, path):
@@ -23,11 +20,8 @@ class Graph:
         while line:
             if (not hasattr(self, "nodes_count") and line.upper().find("N=") != -1):
                 self.nodes_count = int(line[2:])
-<<<<<<< HEAD
                 print(self.nodes_count)
-=======
                 #print(self.nodes_count)
->>>>>>> Init commit
                 continue
             if (not matrix):
                 matrix = line.upper().count("[MATRIX]")
@@ -57,18 +51,14 @@ class WorkerThread(threading.Thread):
         self.rows_per_thread = rows_per_thread
         self.graph_lock = graph_lock
 
-<<<<<<< HEAD
-=======
         self.left_border = self.thread_idx*self.graph.nodes_count*self.rows_per_thread
         self.right_border = min((self.thread_idx+1)*self.graph.nodes_count*self.rows_per_thread, self.graph.nodes_count**2)
 
->>>>>>> Init commit
     def get_rows(self, k):
         self.k_row = []
         self.graph_lock.acquire(1)
         for i in range(0, self.graph.nodes_count):
             self.k_row.append(self.graph.matrix[k*self.graph.nodes_count + i])
-<<<<<<< HEAD
         self.graph_lock.release()
 
         self.main_rows = []
@@ -84,7 +74,6 @@ class WorkerThread(threading.Thread):
     def run(self):
         for i in range(0, self.graph.nodes_count):
             self.get_rows(i)
-=======
         #self.graph_lock.release()
 
         self.main_rows = []
@@ -120,16 +109,11 @@ class WorkerThread(threading.Thread):
             self.change_rows(i)
             print(self.thread_idx, i, self.graph.matrix)
             self.write_changes()
->>>>>>> Init commit
         """while (1):
             nexturl = self.grab_next_url()
             if nexturl == None: break
             self.retrieve_url(nexturl)"""
-<<<<<<< HEAD
-
-=======
 """
->>>>>>> Init commit
     def grab_next_url(self):
         self.url_list_lock.acquire(1)
         if len(self.url_list) < 1:
@@ -147,19 +131,16 @@ class WorkerThread(threading.Thread):
         print
         '################### %s #######################' % nexturl
 
-<<<<<<< HEAD
 
 graph=Graph("graphs/3.graph")
 graph_lock = threading.Lock()
 
-=======
 """
 graph=Graph("graphs/3.graph")
 graph_lock = threading.Lock()
 
 print(graph.matrix)
 
->>>>>>> Init commit
 if (graph.nodes_count < NUMBER_OF_THREADS):
     NUMBER_OF_THREADS = graph.nodes_count
 rows_per_thread = int(graph.nodes_count/NUMBER_OF_THREADS)
@@ -174,11 +155,7 @@ for thread_idx in range(0, NUMBER_OF_THREADS):
 for thread_idx in range(0, NUMBER_OF_THREADS):
     thread_list[thread_idx].join()
 
-<<<<<<< HEAD
-
-=======
 print(graph.matrix)
->>>>>>> Init commit
 
 """
 url_list = ['http://linux.org.ru', 'http://kernel.org', 'http://python.org']
