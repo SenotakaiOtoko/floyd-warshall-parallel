@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (triangle_area)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 virtualenv at C:\Users\User\PycharmProjects\floyd-warshall-parallel\venv" project-jdk-type="Python SDK" />
+>>>>>>> Init commit
 </project>

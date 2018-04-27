@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/triangle_area.iml" filepath="$PROJECT_DIR$/.idea/triangle_area.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/floyd-warshall-parallel.iml" filepath="$PROJECT_DIR$/.idea/floyd-warshall-parallel.iml" />
+>>>>>>> Init commit
     </modules>
   </component>
 </project>
